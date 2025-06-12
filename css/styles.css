@@ -1,7 +1,6 @@
-/* Variables para colores violetas tipo Twitch */
 :root {
   --color-bg: #1e1b2e;
-  --color-header: #3a1f6e; /* violeta más vivo */
+  --color-header: #3a1f6e; 
   --color-primary: #bb86fc;
   --color-accent: #c89aff;
   --color-accent-hover: #e0b3ff;
@@ -11,7 +10,6 @@
   --color-nav-link-hover: #f3d4ff;
 }
 
-/* Body layout flex column */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--color-bg);
@@ -23,7 +21,6 @@ body {
   min-height: 100vh;
 }
 
-/* Header con flex para nav y título */
 header {
   background: var(--color-header);
   padding: 1rem 2rem;
@@ -43,7 +40,6 @@ h1 {
   text-shadow: 0 0 8px var(--color-primary);
 }
 
-/* Navegación con ul y flex */
 nav ul {
   list-style: none;
   display: flex;
@@ -67,7 +63,7 @@ nav a {
   display: inline-block;
 }
 
-/* Fondo y sombra sutil al hover */
+
 nav a:hover,
 nav a:focus {
   color: var(--color-nav-link-hover);
@@ -76,13 +72,13 @@ nav a:focus {
   outline: none;
 }
 
-/* Main ocupa espacio */
+
 main {
   flex: 1;
   padding: 2rem;
 }
 
-/* Banner con borde redondo y sombra */
+
 .banner img {
   width: 100%;
   height: auto;
@@ -90,7 +86,7 @@ main {
   box-shadow: 0 8px 20px rgba(75, 0, 130, 0.7);
 }
 
-/* Últimos lanzamientos */
+
 .ultimos-lanzamientos {
   text-align: center;
   padding: 2rem 0;
@@ -103,7 +99,7 @@ main {
   text-shadow: 0 0 10px var(--color-accent-hover);
 }
 
-/* Grid responsive para juegos */
+
 .juegos {
   display: grid;
   grid-template-columns: 1fr;
@@ -122,7 +118,7 @@ main {
   }
 }
 
-/* Artículos con animaciones y sombra */
+
 article {
   background-color: var(--color-article-bg);
   padding: 1rem;
@@ -156,7 +152,7 @@ article p {
   color: var(--color-primary);
 }
 
-/* Footer estilo consistente */
+
 footer {
   background-color: var(--color-header);
   padding: 1rem 2rem;

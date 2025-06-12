@@ -1,0 +1,172 @@
+/* Variables para colores violetas tipo Twitch */
+:root {
+  --color-bg: #1e1b2e;
+  --color-header: #3a1f6e; /* violeta más vivo */
+  --color-primary: #bb86fc;
+  --color-accent: #c89aff;
+  --color-accent-hover: #e0b3ff;
+  --color-article-bg: #312244;
+  --color-text-footer: #aaa;
+  --color-nav-link: #d4b5ff;
+  --color-nav-link-hover: #f3d4ff;
+}
+
+/* Body layout flex column */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg);
+  color: #eee;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header con flex para nav y título */
+header {
+  background: var(--color-header);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 10px rgba(75, 0, 130, 0.7);
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: var(--color-primary);
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px var(--color-primary);
+}
+
+/* Navegación con ul y flex */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  color: var(--color-nav-link);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+/* Fondo y sombra sutil al hover */
+nav a:hover,
+nav a:focus {
+  color: var(--color-nav-link-hover);
+  background: rgba(187, 134, 252, 0.25);
+  box-shadow: 0 0 8px var(--color-primary);
+  outline: none;
+}
+
+/* Main ocupa espacio */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Banner con borde redondo y sombra */
+.banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(75, 0, 130, 0.7);
+}
+
+/* Últimos lanzamientos */
+.ultimos-lanzamientos {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.ultimos-lanzamientos h2 {
+  color: var(--color-accent-hover);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-shadow: 0 0 10px var(--color-accent-hover);
+}
+
+/* Grid responsive para juegos */
+.juegos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 600px) {
+  .juegos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .juegos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Artículos con animaciones y sombra */
+article {
+  background-color: var(--color-article-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover,
+article:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(75, 0, 130, 0.9);
+  outline: none;
+}
+
+article img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(75, 0, 130, 0.5);
+}
+
+article h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-primary);
+  text-shadow: 0 0 6px var(--color-primary);
+}
+
+article p {
+  margin: 0;
+  color: var(--color-primary);
+}
+
+/* Footer estilo consistente */
+footer {
+  background-color: var(--color-header);
+  padding: 1rem 2rem;
+  text-align: center;
+  color: var(--color-text-footer);
+  font-size: 0.9rem;
+  margin-top: auto;
+  box-shadow: inset 0 1px 3px rgba(255,255,255,0.1);
+}
+
+.bg-dark-violet {
+  background-color: var(--color-article-bg) !important;
+}
